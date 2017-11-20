@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mybatis的sql标签 -->
+<mapper namespace="com.cn.czb.dao.TextTbDao">
+	<select id="serlectTextTb" resultType="TextTb" parameterType="textTb">
+         SELECT username,password,age FROM user_t 
+        WHERE  username=#{username} and password=#{password}
+	</select>
+</mapper>

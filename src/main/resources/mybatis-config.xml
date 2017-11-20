@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- setting 配置 二级缓存  延迟加载。。。 -->
+
+    <settings>
+        <!-- <使用jdbc的getGeneratedKeys 获取数据库自增主键值 -->
+        <setting name="useGeneratedKeys" value="true"/>
+        <!--使用类别名替换列名 默认为true
+             select name sa title from table
+        -->
+        <setting name="useColumnLabel" value="true"/>
+        <!--开启驼峰命名转换 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!-- com.cn.czb.text   别名：text -->
+        <!-- 可以通过包来配置和通过类来配置 -->
+    <typeAliases>
+        <package name="com.cn.czb"/>
+    </typeAliases>
+
+
+
+    <!--
+     <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <setting name="useColumnLabel" value="true"/>
+        <setting name="useGeneratedKeys" value="false"/>
+        <setting name="enhancementEnabled" value="false"/>
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="defaultStatementTimeout" value="25000"/>
+    </settings>
+    -->
+</configuration>
